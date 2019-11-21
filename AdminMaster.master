@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" class="fixed">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Rajasthali</title>
+    <script src="vendor/pace/pace.min.js"></script>
+    <link href="vendor/pace/pace-theme-minimal.css" rel="stylesheet" />
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css" />
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="stylesheets/css/style.css" />
+    <link rel="stylesheet" href="vendor/data-table/media/css/dataTables.bootstrap.min.css" /> 
+    <link rel="stylesheet" href="vendor/data-table/extensions/Responsive/css/responsive.bootstrap.min.css" />
+    <script src="vendor/jquery/jquery-1.12.3.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrap">
+            <div class="page-header">
+                <div class="leftside-header">
+                    <div class="logo">                       
+                        <a href='Main.aspx' class="on-click">
+                            <h2 style="font-weight: bold;text-align:center">Rajasthali</h2>
+                        </a>
+                    </div>
+                    <div id="menu-toggle" class="visible-xs toggle-left-sidebar" data-toggle-class="left-sidebar-open" data-target="html">
+                        <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                    </div>
+                </div>
+                <div class="rightside-header">
+                    <div class="header-middle"></div>
+                    <div class="header-separator"></div>
+                    <div class="header-section">
+                        <asp:LinkButton ID="lnkLogout" runat="server" ForeColor="#ffffff" title="Logout" data-toggle="tooltip" data-placement="left"  CssClass="fa fa-sign-out log-out" ></asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+            <div class="page-body">
+                <div class="left-sidebar">
+                    <div class="left-sidebar-header">
+                        <div class="left-sidebar-toggle c-hamburger c-hamburger--htla hidden-xs" data-toggle-class="left-sidebar-collapsed" data-target="html">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="left-sidebar">
+                    <div class="left-sidebar-header">
+                        <div class="left-sidebar-toggle c-hamburger c-hamburger--htla hidden-xs" data-toggle-class="left-sidebar-collapsed" data-target="html">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div id="left-nav" class="nano">
+                        <div class="nano-content">
+                            <nav>
+                                <ul class="nav" id="main-nav">
+                                  <%--  <li class="active-item"><a href="Main.aspx"<i class="fa fa-home" aria-hidden="true"></i><span>Dashboard</span></a></li>--%>
+                                    <li><a href="Enquiry.aspx"><i class="fa fa-cube" aria-hidden="true"></i><span>Visitor</span></a></li>
+                                    <li><a href="Users.aspx"><i class="fa fa-cube" aria-hidden="true"></i><span>Users</span></a></li>
+                                    <li><a href="SendSms.aspx"><i class="fa fa-cube" aria-hidden="true"></i><span>Send Sms</span></a></li>
+                                    <%--<li class="has-child-item close-item">
+                                        <a><i class="fa fa-cubes" aria-hidden="true"></i><span>About Us</span></a>
+                                        <ul class="nav child-nav level-1">
+                                            <li><a href="AboutUs.aspx?type=Real Estate">Real Estate</a></li>
+                                            <li><a href="AboutUs.aspx?type=Finance">Finance</a></li>
+                                            <li><a href="AboutUs.aspx?type=Insurance">Insurance</a></li>
+                                        </ul>
+                                    </li>--%>
+                                   <%-- <li class="has-child-item close-item">
+                                        <a><i class="fa fa-home" aria-hidden="true"></i><span>Real Estate</span></a>
+                                        <ul class="nav child-nav level-1">
+                                            <li><a href="Area.aspx">Area</a></li>
+                                            <li><a href="Area.aspx">Home Page</a></li>
+                                            <li><a href="Category.aspx">Category</a></li>
+                                            <li><a href="Sub_Category.aspx">Sub-Category</a></li>
+                                            <li><a href="Category.aspx">Sub-Sub-Category</a></li>
+                                        </ul>
+                                    </li>--%>
+                                  <%--  <li class="has-child-item close-item">
+                                        <a><i class="fa fa-cubes" aria-hidden="true"></i><span>Finance</span></a>
+                                        <ul class="nav child-nav level-1">
+                                            <li><a href="Category.aspx">Category</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-child-item close-item">
+                                        <a><i class="fa fa-cubes" aria-hidden="true"></i><span>Insurance</span></a>
+                                        <ul class="nav child-nav level-1">
+                                            <li><a href="Category.aspx">Category</a></li>
+                                        </ul>
+                                    </li>--%>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <a href="#" class="scroll-to-top"><i class="fa fa-image"></i></a>
+            </div>
+        </div>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendor/data-table/media/js/jquery.dataTables.min.js"></script>
+        <script src="vendor/data-table/media/js/dataTables.bootstrap.min.js"></script>
+        <script src="vendor/nano-scroller/nano-scroller.js"></script>
+        <script src="javascripts/template-script.min.js"></script>
+        <script src="javascripts/template-init.min.js"></script>
+        <script src="vendor/chart-js/chart.min.js"></script>
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/data-table/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <script src="vendor/data-table/extensions/Responsive/js/responsive.bootstrap.min.js"></script>
+    <script src="javascripts/examples/tables/data-tables.js"></script>
+    </form>
+</body>
+</html>
